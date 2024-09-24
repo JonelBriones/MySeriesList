@@ -11,6 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "primary-red": "#FC4747",
+        "primary-dark-blue": "#10141E",
+        "off-gray-blue": "#5A698F",
+        "dark-gray-blue": "161D2F",
+      },
+      fontFamily: {
+        body: ["Outfit"],
       },
     },
   },

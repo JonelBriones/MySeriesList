@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Entertainment Web App",
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="font-body flex bg-primary-dark-blue text-white">
+        <div className="w-[10vh] h-dvh">
+          <Navbar />
+        </div>
+        <div className="w-[90vh] pl-16 pt-16">{children}</div>
+      </body>
     </html>
   );
 }
