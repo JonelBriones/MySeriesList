@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import SearchBar from "@/components/SearchBar";
 
 export const metadata: Metadata = {
   title: "Entertainment Web App",
@@ -15,11 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-body flex bg-primary-dark-blue text-white">
-        <div className="w-[10vh] h-dvh">
+      <body className="font-body flex bg-primary-dark-blue text-white overflow-hidden">
+        <div className="w-[15vh] h-screen">
           <Navbar />
         </div>
-        <div className="w-[90vh] pl-16 pt-16">{children}</div>
+        <div className="w-full h-screen overflow-y-auto scrollbar-hide">
+          <SearchBar />
+          <div className=" overflow-auto">{children}</div>
+        </div>
       </body>
     </html>
   );
