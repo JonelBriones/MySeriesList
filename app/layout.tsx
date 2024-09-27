@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
@@ -16,13 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-body flex bg-primary-dark-blue text-white overflow-hidden">
-        <div className="w-[15vh] h-screen">
+      <body className="font-body flex bg-primary-dark-blue text-white overflow-hidden select-none">
+        <div className="h-screen hidden md:block ml-6">
           <Navbar />
         </div>
-        <div className="w-full h-screen overflow-y-auto scrollbar-hide">
-          <SearchBar />
-          <div className=" overflow-auto">{children}</div>
+        <div className="w-full h-screen overflow-y-auto scrollbar-hide pt-10 mx-6">
+          {/* <SearchBar /> */}
+          <div className=" overflow-auto ">{children}</div>
         </div>
       </body>
     </html>
